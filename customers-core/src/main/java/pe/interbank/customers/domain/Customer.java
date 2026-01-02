@@ -3,6 +3,7 @@ package pe.interbank.customers.domain;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
 import java.io.Serializable;
 
 @Data

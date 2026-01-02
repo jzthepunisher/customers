@@ -10,7 +10,7 @@ public class CustomerMapper {
         customer.setUniqueCode(request.getUniqueCode());
         customer.setNames(request.getNames());
         customer.setLastNames(request.getLastNames());
-        customer.setDocumentType(request.getDocumentType());
+        customer.setDocumentType(request.getDocumentType().getName());
         customer.setDocumentNumber(request.getDocumentNumber());
         return customer;
     }

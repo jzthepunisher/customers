@@ -21,7 +21,7 @@ public class CustomerWebDto implements Serializable {
     @NotNull
     private String lastNames;
     @NotNull
-    private String documentType;
+    private CustomerDocumentType documentType;
     @NotNull
     private String documentNumber;
 }
