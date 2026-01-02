@@ -14,7 +14,6 @@ import pe.interbank.customers.controller.web.dto.request.CustomerWebDto;
 import pe.interbank.customers.controller.web.dto.response.CustomerResponseWebDto;
 import pe.interbank.customers.service.CustomersService;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 @RestController

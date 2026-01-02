@@ -8,6 +8,7 @@ import pe.interbank.customers.domain.Customer;
 import pe.interbank.customers.mapper.CustomerMapper;
 import pe.interbank.customers.repository.CustomersRepository;
 import pe.interbank.customers.service.CustomersService;
+import pe.interbank.customers.util.api.exceptions.NotFoundException;
 
 @Service
 public class CustomersServiceImpl implements CustomersService {
@@ -33,6 +34,9 @@ public class CustomersServiceImpl implements CustomersService {
     @Override
     public CustomerResponseWebDto find(String uniqueCode) {
         Customer customerDomain = this.customersRepository.find(uniqueCode);
+        if(null == customerDomain) {
+            throw new NotFoundException("Customer not found");
+        }
         return CustomerMapper.domainToResponse(customerDomain);
     }
 
