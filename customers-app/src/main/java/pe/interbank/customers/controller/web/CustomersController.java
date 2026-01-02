@@ -18,7 +18,6 @@ import javax.validation.constraints.NotNull;
 
 @RestController
 @RequestMapping("/customers")
-@Validated
 public class CustomersController {
     private static final String PARAM_UNIQUE_CODE = "uniqueCode";
 
