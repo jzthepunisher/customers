@@ -38,4 +38,4 @@ EXPOSE 8081:8080
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]
 
 #docker build -t customers/my-app:1.0.0 .
-#docker run -p 8081:8080 customers/my-app:1.0.0
+#docker run -p 8080:8080 customers/my-app:1.0.0
