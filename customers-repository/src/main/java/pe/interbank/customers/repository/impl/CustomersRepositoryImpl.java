@@ -7,6 +7,8 @@ import pe.interbank.customers.repository.dao.entity.CustomerEntity;
 import pe.interbank.customers.repository.dao.repository.CustomerRepository;
 import pe.interbank.customers.repository.mapper.CustomerMapper;
 
+import java.util.Optional;
+
 @Repository
 public class CustomersRepositoryImpl implements CustomersRepository {
 
@@ -25,8 +27,8 @@ public class CustomersRepositoryImpl implements CustomersRepository {
 
     @Override
     public Customer find(String uniqueCode) {
-        CustomerEntity entityFinded = customerRepository.findByUniqueCode(uniqueCode);
-        Customer customerDomain = CustomerMapper.entityToDomain(entityFinded);
+        Optional<CustomerEntity> entityFinded = customerRepository.findByUniqueCode(uniqueCode);
+        Customer customerDomain = CustomerMapper.entityToDomain(entityFinded.isPresent() ? entityFinded.get() : null);
         return customerDomain;
     }
 }
