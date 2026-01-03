@@ -2,16 +2,13 @@ package pe.interbank.customers.service.impl;
 
 import org.springframework.stereotype.Service;
 import pe.interbank.customers.controller.web.dto.request.TransactionWebDto;
-import pe.interbank.customers.controller.web.dto.response.CustomerResponseWebDto;
 import pe.interbank.customers.controller.web.dto.response.TransactionResponseWebDto;
 import pe.interbank.customers.domain.Customer;
 import pe.interbank.customers.domain.Transaction;
-import pe.interbank.customers.mapper.CustomerMapper;
 import pe.interbank.customers.mapper.TransactionMapper;
 import pe.interbank.customers.repository.CustomersRepository;
 import pe.interbank.customers.repository.TransactionRepository;
 import pe.interbank.customers.service.TransactionService;
-import pe.interbank.customers.util.api.exceptions.InvalidInputException;
 import pe.interbank.customers.util.api.exceptions.NotFoundException;
 
 @Service

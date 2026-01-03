@@ -1,13 +1,11 @@
 package pe.interbank.customers.repository.impl;
 
 import org.springframework.stereotype.Repository;
-import pe.interbank.customers.domain.Customer;
 import pe.interbank.customers.domain.Transaction;
 
 import pe.interbank.customers.repository.TransactionRepository;
 import pe.interbank.customers.repository.dao.entity.TransactionEntity;
 import pe.interbank.customers.repository.dao.repository.TransactionDaoRepository;
-import pe.interbank.customers.repository.mapper.CustomerMapper;
 import pe.interbank.customers.repository.mapper.TransactionMapper;
 
 @Repository
